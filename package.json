@@ -4,11 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
+    "dev:local": "vite",
     "build": "vite build && cp .htaccess dist/",
     "build:prod": "vite build && cp .htaccess dist/ && echo 'Build complete! Make sure to upload the dist folder to your server.'",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "react": "^19.2.0",

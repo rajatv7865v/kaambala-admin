@@ -6,20 +6,24 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   server: {
-    host: true,
+    host: '0.0.0.0',
+    port: 5173,
+    strictPort: false,
     allowedHosts: [
       'admin.kaambala.com',
       'localhost',
+      '127.0.0.1',
       '.kaambala.com'
     ]
   },
   preview: {
-    host: true,
+    host: '0.0.0.0',
     port: 3000,
-    strictPort: true,
+    strictPort: false,
     allowedHosts: [
       'admin.kaambala.com',
       'localhost',
+      '127.0.0.1',
       '.kaambala.com'
     ]
   },
