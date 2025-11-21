@@ -5,6 +5,24 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/',
+  server: {
+    host: true,
+    allowedHosts: [
+      'admin.kaambala.com',
+      'localhost',
+      '.kaambala.com'
+    ]
+  },
+  preview: {
+    host: true,
+    port: 3000,
+    strictPort: true,
+    allowedHosts: [
+      'admin.kaambala.com',
+      'localhost',
+      '.kaambala.com'
+    ]
+  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -13,9 +31,5 @@ export default defineConfig({
         manualChunks: undefined
       }
     }
-  },
-  preview: {
-    port: 3000,
-    strictPort: true
   }
 })
