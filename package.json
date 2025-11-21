@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp .htaccess dist/",
+    "build:prod": "vite build && cp .htaccess dist/ && echo 'Build complete! Make sure to upload the dist folder to your server.'",
     "lint": "eslint .",
     "preview": "vite preview"
   },
